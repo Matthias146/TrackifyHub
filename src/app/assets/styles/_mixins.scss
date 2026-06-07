@@ -1,0 +1,50 @@
+// Card
+@mixin card($padding: $spacing-md) {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  border: 0.5px solid $color-border;
+  padding: $padding;
+}
+
+// Flex Hilfsmittel
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Responsive Breakpoints
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+// Text abschneiden
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Status Badge
+@mixin badge($bg, $color) {
+  background: $bg;
+  color: $color;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: $font-size-xs;
+  font-weight: 500;
+}
