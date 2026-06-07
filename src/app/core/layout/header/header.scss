@@ -1,0 +1,68 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.header {
+  height: $topbar-height;
+  background: white;
+  border-bottom: 0.5px solid $color-border;
+  padding: 0 $spacing-lg;
+  flex-shrink: 0;
+  @include flex-between;
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    background: $color-bg-page;
+    border: 0.5px solid $color-border;
+    border-radius: $radius-md;
+    padding: 6px $spacing-sm;
+    width: 300px;
+    color: $color-text-secondary;
+
+    input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: $font-size-sm;
+      color: $color-text-primary;
+      width: 100%;
+
+      &::placeholder {
+        color: $color-text-secondary;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-md;
+    @include flex-center;
+    color: $color-text-secondary;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $color-bg-page;
+      color: $color-text-primary;
+    }
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: $color-primary;
+    color: white;
+    font-size: $font-size-xs;
+    font-weight: 500;
+    cursor: pointer;
+    @include flex-center;
+  }
+}

@@ -1,0 +1,16 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.footer {
+  height: 40px;
+  background: white;
+  border-top: 0.5px solid $color-border;
+  padding: 0 $spacing-lg;
+  flex-shrink: 0;
+  @include flex-between;
+
+  span {
+    font-size: $font-size-xs;
+    color: $color-text-secondary;
+  }
+}

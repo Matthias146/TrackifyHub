@@ -1,0 +1,65 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.sidebar {
+  width: $sidebar-width;
+  height: 100vh;
+  background: $color-sidebar;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  &__brand {
+    padding: $spacing-lg $spacing-md;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__brand-name {
+    font-size: $font-size-md;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  &__brand-sub {
+    font-size: $font-size-xs;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__nav {
+    flex: 1;
+    padding: $spacing-sm 0;
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-sm;
+    color: rgba(255, 255, 255, 0.65);
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+
+    &.active {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border-left-color: #fff;
+    }
+  }
+
+  &__bottom {
+    padding: $spacing-sm 0;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
+}

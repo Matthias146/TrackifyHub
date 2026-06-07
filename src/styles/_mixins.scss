@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 // Card
 @mixin card($padding: $spacing-md) {
   background: $color-bg-card;
