@@ -1,0 +1,47 @@
+<div class="orders-table">
+  <div class="orders-table__header">
+    <span class="orders-table__title">Recent Orders</span>
+    <a routerLink="/orders" class="orders-table__link">View all orders →</a>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (order of orders(); track order.id) {
+        <tr>
+          <td class="order-id">{{ order.id }}</td>
+          <td>{{ order.customer }}</td>
+          <td>{{ order.date }}</td>
+          <td>{{ order.amount }}</td>
+          <td>
+            <span class="badge" [class]="'badge-' + order.status">
+              {{ order.status }}
+            </span>
+          </td>
+          <td>
+            <div class="actions">
+              <button class="action-icon" aria-label="View">
+                <ng-icon name="tablerEye" size="16" />
+              </button>
+              <button class="action-icon" aria-label="Edit">
+                <ng-icon name="tablerEdit" size="16" />
+              </button>
+              <button class="action-icon" aria-label="Delete">
+                <ng-icon name="tablerTrash" size="16" />
+              </button>
+            </div>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

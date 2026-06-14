@@ -1,0 +1,104 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.orders-table {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  &__header {
+    @include flex-between;
+  }
+
+  &__title {
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: $color-text-primary;
+  }
+
+  &__link {
+    font-size: $font-size-xs;
+    color: $color-primary;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: $font-size-sm;
+    table-layout: fixed;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 100px;
+  }
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 250px;
+  }
+  th:nth-child(3),
+  td:nth-child(3) {
+    width: 110px;
+  }
+  th:nth-child(4),
+  td:nth-child(4) {
+    width: 100px;
+  }
+  th:nth-child(5),
+  td:nth-child(5) {
+    width: 100px;
+  }
+  th:nth-child(6),
+  td:nth-child(6) {
+    width: 90px;
+  }
+
+  th {
+    text-align: left;
+    padding: $spacing-sm;
+    color: $color-text-secondary;
+    font-weight: 500;
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    border-bottom: 0.5px solid $color-border;
+  }
+
+  td {
+    padding: $spacing-sm;
+    color: $color-text-primary;
+    border-bottom: 0.5px solid $color-border;
+
+    .badge {
+      text-transform: capitalize;
+    }
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  .order-id {
+    color: $color-primary;
+    font-family: monospace;
+  }
+
+  .actions {
+    display: flex;
+    gap: 4px;
+  }
+
+  .action-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: $radius-sm;
+    @include flex-center;
+    color: $color-text-secondary;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $color-bg-page;
+      color: $color-text-primary;
+    }
+  }
+}
