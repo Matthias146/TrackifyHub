@@ -1,0 +1,20 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.line-chart {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  &__title {
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: $color-text-primary;
+  }
+
+  &__area {
+    height: 180px;
+    position: relative;
+  }
+}
