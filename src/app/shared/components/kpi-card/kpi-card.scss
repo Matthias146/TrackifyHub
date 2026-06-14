@@ -1,0 +1,30 @@
+@use "../../../../styles/variables" as *;
+@use "../../../../styles/mixins" as *;
+
+.kpi-card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  &__header {
+    @include flex-between;
+    color: $color-text-secondary;
+  }
+
+  &__title {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+  }
+
+  &__value {
+    font-size: $font-size-xl;
+    font-weight: 500;
+    color: $color-text-primary;
+  }
+
+  &__trend {
+    font-size: $font-size-xs;
+    color: $color-text-secondary;
+  }
+}
