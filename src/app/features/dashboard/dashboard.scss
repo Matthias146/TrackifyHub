@@ -1,0 +1,30 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  &__header {
+    @include flex-between;
+
+    h1 {
+      font-size: $font-size-lg;
+      font-weight: 500;
+      color: $color-text-primary;
+    }
+  }
+
+  &__kpis {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: $spacing-md;
+  }
+
+  &__charts {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: $spacing-md;
+  }
+}

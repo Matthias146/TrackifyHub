@@ -1,1 +1,41 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+  <div class="dashboard__header">
+    <div>
+      <h1>Dashboard</h1>
+      <p class="text-secondary">Welcome back — here's what's happening today.</p>
+    </div>
+    <button class="btn-primary">
+      <ng-icon name="tablerPlus" size="16" />
+      New Order
+    </button>
+  </div>
+
+  <div class="dashboard__kpis">
+    <app-kpi-card
+      title="Total Orders"
+      value="142"
+      trend="↑ 12% vs last month"
+      icon="tablerClipboardList"
+    />
+    <app-kpi-card title="Pending" value="12" trend="Requires attention" icon="tablerClock" />
+    <app-kpi-card title="Delivered Today" value="8" trend="On track" icon="tablerCircleCheck" />
+    <app-kpi-card
+      title="Monthly Revenue"
+      value="€24,500"
+      trend="↑ 8% vs last month"
+      icon="tablerCurrencyEuro"
+    />
+  </div>
+  <div class="dashboard__charts">
+    <app-line-chart
+      title="Orders This Week"
+      [labels]="['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']"
+      [data]="[18, 24, 19, 31, 27, 22, 28]"
+    />
+    <app-donut-chart
+      title="Order Status"
+      [labels]="['Delivered', 'Shipped', 'Pending', 'Cancelled']"
+      [data]="[68, 17, 8, 7]"
+    />
+  </div>
+</div>
