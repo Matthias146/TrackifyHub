@@ -11,6 +11,14 @@ import {
   tablerHelpCircle,
   tablerBell,
   tablerSearch,
+  tablerPlus,
+  tablerClipboardList,
+  tablerClock,
+  tablerCircleCheck,
+  tablerCurrencyEuro,
+  tablerEye,
+  tablerEdit,
+  tablerTrash,
 } from '@ng-icons/tabler-icons';
 
 export const appConfig: ApplicationConfig = {
@@ -26,6 +34,14 @@ export const appConfig: ApplicationConfig = {
       tablerHelpCircle,
       tablerBell,
       tablerSearch,
+      tablerPlus,
+      tablerClipboardList,
+      tablerClock,
+      tablerCircleCheck,
+      tablerCurrencyEuro,
+      tablerEye,
+      tablerEdit,
+      tablerTrash,
     }),
   ],
 };
